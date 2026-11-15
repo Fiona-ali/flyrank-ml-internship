@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #f3f7f8;
+  background: #071321;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  isolation: isolate;
+  background: radial-gradient(ellipse at 72% 44%, #10243a 0, #0b192a 42%, #071321 78%);
+}
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 27px clamp(22px, 6vw, 88px);
+  border-bottom: 1px solid rgba(238,248,250,.08);
+}
+.wordmark { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; font-weight: 700; letter-spacing: .01em; }
+.monogram {
+  width: 38px; height: 38px; display: grid; place-items: center;
+  border-radius: 12px; background: #04bdb4; color: #061421;
+  font-family: 'Manrope', sans-serif; font-size: 13px; font-weight: 800;
+}
+.status { color: #acbac6; font-size: 13px; display: flex; align-items: center; gap: 9px; }
+.status i { width: 7px; height: 7px; border-radius: 50%; background: #04c5b8; box-shadow: 0 0 14px #04c5b8; }
+.hero {
+  width: min(900px, 100%); margin: auto; padding: 100px 24px 110px;
+  position: relative; z-index: 1;
+}
+.eyebrow { color: #36d5cc; letter-spacing: .19em; font-size: 11px; font-weight: 700; margin: 0 0 28px; }
+h1 { margin: 0; font: 800 clamp(48px, 8vw, 88px)/1.04 'Manrope', sans-serif; letter-spacing: -.065em; }
+h1 span { color: #7e93a5; }
+.intro { margin: 25px 0 0; color: #b6c2cc; font-size: clamp(16px, 2vw, 19px); }
+.rule { margin: 52px 0 20px; height: 1px; width: min(420px, 85%); background: rgba(222,238,242,.14); position: relative; }
+.rule span { position: absolute; top: -1px; left: 0; width: 72px; height: 2px; background: #04bdb4; }
+.signature { font-size: 13px; color: #8598a9; letter-spacing: .08em; }
+.signature span { color: #36d5cc; padding: 0 7px; }
+footer { padding: 24px clamp(22px, 6vw, 88px); color: #8192a2; font-size: 12px; border-top: 1px solid rgba(238,248,250,.08); }
+footer span { color: #36d5cc; padding: 0 5px; }
+.glow { position: absolute; width: 420px; height: 420px; border: 1px solid rgba(0,190,180,.12); border-radius: 50%; z-index: -1; }
+.glow-one { top: 16%; right: -240px; }
+.glow-two { bottom: 4%; right: -315px; width: 570px; height: 570px; }
+@media (max-width: 520px) {
+  .topbar { padding-top: 19px; padding-bottom: 19px; }
+  .status { font-size: 11px; }
+  .hero { padding-top: 74px; padding-bottom: 78px; }
+  .eyebrow { letter-spacing: .13em; font-size: 10px; }
+}
