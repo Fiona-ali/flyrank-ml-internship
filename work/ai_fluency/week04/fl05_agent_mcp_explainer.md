@@ -29,7 +29,7 @@ I used the connected **GitHub connector in ChatGPT** against my own public repos
 2. **Read a live repository file.** The connector fetched the first lines of the newly committed FL-04 workflow document from `work/ai_fluency/week04/fl04_portfolio_writing_workflow.md`. It returned the document title and workflow text from GitHub, which a chat model without the connection could not retrieve from the private integration context by itself.
 3. **Search the repository for the Week 4 notebook.** The connector found `work/notebooks/w04_baseline_score.ipynb` and returned an excerpt naming its Refresh / Content Opportunity Scoring lane and editor-review decision. It also found the work index entry. This used the live repository’s indexed contents rather than an answer guessed from the prompt.
 
-These calls show a connected GitHub integration being used for actual repository reads. They do not show a new MCP server installed inside Claude; I used the connected GitHub connector in this MCP-capable assistant environment, consistent with the assignment’s allowance for a connector / any MCP client. The returned results are recorded as tool-call evidence in this submission. **Screenshots of the three connector calls still need to be attached to FlyRank**; this text log is not a screenshot.
+These calls show the connected GitHub integration being used for actual repository reads. I used the GitHub connector route, not a server newly installed in Claude. The assignment allows a connector / any MCP client; the connector tool results are recorded below. **Screenshots of the three connector calls still need to be attached to FlyRank**; this text log is not a screenshot.
 
 ### One concrete upgrade: make FL-04 an agent
 
