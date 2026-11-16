@@ -1,48 +1,25 @@
-# FL-09 live demo recording script
+# FL-09 live demo narration script
 
-**Target length:** 3–5 minutes  
-**Format:** screen recording with Fiona narrating while the real private Claude Project runs. No slides.
+**Target duration:** 3 minutes  
+**Format:** Narrated walkthrough over the original live Study Notes Coach capture. The voice is synthesized; it is not Fiona’s voice. The capture itself is the original two-minute Project run, slowed for readability.
 
-## Recording flow
+## Spoken script
 
-### 0:00–0:30 — Introduce the task
+This is a demonstration of Fiona Ali's private Study Notes Coach, built as a Claude Project. The narration is a synthesized reading of the prepared script; the on-screen project and answer come from a real recorded run. The purpose is simple: help a student understand supplied course notes while making the evidence and uncertainty visible.
 
-“Hi, I’m Fiona. This is my Study Notes Coach, a Claude Project configured to answer from my uploaded course notes. The goal is to make study explanations traceable to the notes and to avoid silently filling gaps with unsupported facts.”
+The project has two source files: Fiona's Prompting Fundamentals assignment notes and the Study Notes Coach design specification. Its standing instructions make those uploaded files the default source. The coach should name the file and page for specific claims, never invent quotations or citations, and say when its sources do not support an answer. It should ask before switching to general knowledge. The project is private and read-only; it cannot submit assignments, edit repositories, publish, message, or share files.
 
-### 0:30–1:10 — Show the setup
+Here the live run asks about the V6 prompt iteration in the uploaded FL-02 notes. The coach searches the project material, explains what changed, and points to the relevant page. In the answer shown, it distinguishes the readability improvement from two unsupported additions: technical decisions and individual contributions. It connects those additions to context leakage and explains how an evidence block, a current-status field, and a claim-check step can reduce the risk. The response ends with one check question, following the project instructions.
 
-Show the Project name, its knowledge files, and its instructions. Keep any account details or unrelated tabs out of frame.
+The key design decision is to ask before filling a gap with general knowledge. For a student, an answer that sounds plausible but does not match the course source can create confusion. Asking gives the learner a choice and keeps course evidence separate from outside explanation. Citing a page also makes the answer easier to check, but a citation is not proof by itself; the page must still be opened and read.
 
-“The Project uses the uploaded FL-02 assignment notes and its design specification. Its instructions ask for file and page citations, require it to say when the notes do not cover a topic, and keep it read-only.”
+One limitation is retrieval quality. The project can select the wrong passage or misread a page, and the evaluation currently has only three documented qualitative scenarios. That is useful early evidence, not a reliability benchmark. The source set is also limited to the files uploaded by the learner. For a broader evaluation, I would test missing, conflicting, and ambiguous sources, inspect every citation, record failures, and only then decide whether the project is dependable for more topics.
 
-### 1:10–2:45 — Run a real question
+This run demonstrates the source-grounded response, a checkable citation, a gap-handling guardrail, and the current limits. The README and build log in the internship repository describe how to recreate the project and what the three checks do and do not establish.
 
-Enter this question in the live Project:
+## Upload checklist
 
-“Using only my uploaded FL-02 assignment notes, explain what V6 improved and what factual issue remained. Cite the filename and page or section. End with exactly one check question, then wait.”
-
-Let Claude generate the answer. Point to the citations and open or show the cited page so the source can be checked.
-
-“The response identifies the readability improvement and the unsupported details about technical decisions and individual contributions. I check the cited page rather than treating a citation as proof by itself.”
-
-### 2:45–3:35 — Explain one design decision
-
-“The key design decision is to ask before switching to general knowledge when the uploaded notes do not support an answer. That keeps course-specific material separate from outside explanation and gives the learner control.”
-
-If practical, show the Project instructions or the documented missing-source run.
-
-### 3:35–4:20 — Explain one limitation
-
-“One limitation is that retrieval can still select the wrong passage or misread a page. The Project has only been checked in three documented scenarios, so these runs do not prove reliability across every topic. I verify citations and would expand the evaluation before depending on it for high-stakes study.”
-
-### 4:20–4:40 — Close
-
-“The Project is read-only: it does not submit assignments or change files. The build log and evaluation notes are in my internship repository.”
-
-## Before uploading
-
-- Confirm the recording is between 3 and 5 minutes.
-- Keep the real Project run and narration audible and visible.
-- Check the citation on screen against the source page.
-- Upload as an unlisted video and place its actual URL in the FlyRank submission.
-- Do not claim that this script or the earlier 120-second capture is the required recording.
+- Keep the video visibility set to **Unlisted**.
+- Verify the final YouTube URL opens the uploaded video.
+- Submit the README link and the YouTube link together in FL-09.
+- State that the voiceover is synthesized; do not imply Fiona narrated it.
