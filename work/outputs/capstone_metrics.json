@@ -1,0 +1,46 @@
+{
+  "assignment": "ML-11 Capstone",
+  "lane": "Refresh / Content Opportunity Scoring",
+  "dataset": "Repository starter CSV; 30,000 anonymized content rows x 44 columns; 32 pseudonymous client groups",
+  "calendar_window": "Calendar dates unavailable; rolling metrics cover trailing 90 days and target compares latest 30 with preceding 30 days",
+  "eligibility": "impressions_90d >= 100",
+  "eligible_rows": 22006,
+  "train_rows": 17396,
+  "test_rows": 4610,
+  "train_clients": 22,
+  "test_clients": 8,
+  "client_overlap": false,
+  "test_proxy_base_rate": 0.5765726681127983,
+  "target": "trend_direction == down; trailing-window proxy, not future outcome",
+  "features": [
+    "search_volume",
+    "competition",
+    "cpc",
+    "word_count",
+    "char_count",
+    "content_age_days",
+    "days_since_last_update",
+    "content_type",
+    "main_intent"
+  ],
+  "model": "Logistic Regression; numeric median imputation with missingness indicators and scaling; categorical explicit missing value and one-hot encoding; seed 42",
+  "model_metrics": {
+    "precision_at_10": 0.6,
+    "precision_at_50": 0.72,
+    "average_precision": 0.6321895824515561,
+    "roc_auc": 0.570676291184053
+  },
+  "week4_rule": "log1p(impressions_90d) * min(days_since_last_update,180) / 180; 90-day metric overlaps target windows",
+  "week4_rule_metrics": {
+    "precision_at_10": 0.5,
+    "precision_at_50": 0.38,
+    "average_precision": 0.52092258221846,
+    "roc_auc": 0.41754207835300794
+  },
+  "roc_auc_reference": 0.5,
+  "versions": {
+    "pandas": "2.2.3",
+    "numpy": "2.3.5",
+    "scikit_learn": "1.8.0"
+  }
+}
