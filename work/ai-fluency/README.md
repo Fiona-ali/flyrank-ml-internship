@@ -3,7 +3,7 @@
 **Owner:** Shaik Fiona Ali  
 **Project type:** Private Claude Project  
 **Current evidence:** Three documented end-to-end runs  
-**FL-09 demo recording:** Pending a 3–5 minute narrated live capture
+**FL-09 demo recording:** A 3-minute narrated edit is prepared from the original 2-minute live capture; its synthesized narration is disclosed. Uploading it to an unlisted YouTube link is still pending.
 
 ## What it does
 
@@ -41,7 +41,7 @@ Three live scenarios are documented in the Fiona-specific build log. They are qu
 | Grounded course-note answer | Use the uploaded course notes and identify the remaining factual issue | Cited the FL-02 notes on page 7, connected the context-leak discussion on page 8, and asked one question |
 | Cross-page source check | Find unsupported additions and explain the template safeguards | Cited pages 7–8, identified unsupported details, described the evidence and missing-fact safeguards, and asked one question |
 
-No numerical accuracy score is claimed. A citation being present does not by itself prove that every sentence is correct; the source page still needs to be checked.
+**V2 evaluation result:** Three qualitative scenarios were checked against the updated instructions and uploaded course notes. All three produced the intended behavior in the observed run: source references appeared, the missing-source case asked before using general knowledge, and each response ended with one check question. This is a small v2 smoke check, not a numeric benchmark or a broad reliability claim. A citation being present does not by itself prove that every sentence is correct; the source page still needs to be checked.
 
 ## Limitations
 
@@ -53,8 +53,10 @@ No numerical accuracy score is claimed. A citation being present does not by its
 
 ## AI-use note
 
-AI assistance helped structure this documentation and the reproducible notebook materials. The Study Notes Coach itself is a Claude Project configured with uploaded course sources and instructions. The three cited responses were checked against their referenced pages; this small review is not a comprehensive evaluation.
+AI assistance helped structure this documentation and the reproducible notebook materials. The Study Notes Coach itself is a Claude Project configured with uploaded course sources and instructions. The three cited responses were checked against their referenced pages; this small review is not a comprehensive evaluation. The FL-09 video uses a synthesized narrator reading the disclosed script; it is not Fiona’s voice. Its screen footage is the original two-minute live Project capture, with playback slowed to fit the narration; it is not a newly recorded session.
 
 ## Demo recording
 
-The required FL-09 video must show a live end-to-end run, last 3–5 minutes, include narration, and explain one design decision and one limitation. The existing FL-07 capture is 120 seconds and has no narration, so it does not meet this requirement. Add the video link here after recording a compliant demo.
+A three-minute narrated edit has been prepared from the original 120-second live Project capture. The synthetic voiceover is disclosed in the recording and the companion script. The captured footage shows the private Project and its actual response; it is slowed for legibility and to fit the narration.
+
+The required unlisted YouTube upload and portal video link are not yet complete. Do not treat the prepared MP4 as a YouTube submission until the upload and portal save are verified.
